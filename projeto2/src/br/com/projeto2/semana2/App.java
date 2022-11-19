@@ -15,3 +15,4 @@ public class App {
     }
 }
 //aplciacao de terminal
+//12 Camada de repositorio- é responsavel por azre acesso ao banco de dados. Vamos simular - objeto de acesso ao banco de dados
