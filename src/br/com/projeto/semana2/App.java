@@ -5,75 +5,89 @@ import br.com.projeto.semana2.classes.Cliente;
 import br.com.projeto.semana2.classes.Diarista; //aqui a importação
 
 public class App {
-    public static void main(String[] args) {
-    //Passo #02
-        //constructor nada mais é do que um metodo para construir objeto e gerar instancia do objeto
-    var diarista = new Diarista("Chameison Lima", "(68) 99950-5446", "MOntanhes, 1517", "1qas2e23e2e2we2e"); //classe diariista esta em outro local, vamos importar
-    // joao.nome = "Chameison Araujo";
-    // joao.telefone = "(68) 99950-5446";
-    // joao.endereco = "Montanhes 1517";
- 
-
-    System.out.println("Nome: " + diarista.getNome());
-    System.out.println("Telefone: " + diarista.getTelefone());
-    System.out.println("Endereço: " + diarista.getEndereco());
-    System.out.println("Chave pix: " + diarista.getChavePix());
-    System.out.println("Saldo: " + diarista.getSaldo());
-
-    diarista.depositar(100);
-    System.out.println("Saldo: " + diarista.getSaldo());
-    diarista.sacar(50);
-    System.out.println("Saldo: " + diarista.getSaldo());
-
-
-    diarista.atender("Joaozinho"); //chamada do metodo atender
-
-    var cliente = new Cliente("Leonidas", "(68) 99999999", "TRAVESSA");
-    System.out.println("Nome: " + cliente.getNome());
-    System.out.println("Telefone: " + cliente.getTelefone());
-    System.out.println("Endereço: " + cliente.getEndereco());
-    System.out.println("Saldo: " + cliente.getSaldo());
-    cliente.depositar(1000);
-    System.out.println("Saldo: " + cliente.getSaldo());
-    cliente.sacar(400);
-    System.out.println("Saldo: " + cliente.getSaldo());
-
+        public static void main(String[] args) {
+        //Passo #02
+            //constructor nada mais é do que um metodo para construir objeto e gerar instancia do objeto
+        var diarista = new Diarista("Chameison Lima", "(68) 99950-5446", "MOntanhes, 1517", "1qas2e23e2e2we2e"); //classe diariista esta em outro local, vamos importar
+        // joao.nome = "Chameison Araujo";
+        // joao.telefone = "(68) 99950-5446";
+        // joao.endereco = "Montanhes 1517";
     
 
-        //poderiamos fazer isso aqui. por isso classes abstratas. 
-    // var pessoa = new Pessoa(null, null, null); //apos alteramos para abstrato, deu erro nessa linha, pois ela é abstrata e pode ser aplicada somente atraves das subclasses
+        System.out.println("Nome: " + diarista.getNome());
+        System.out.println("Telefone: " + diarista.getTelefone());
+        System.out.println("Endereço: " + diarista.getEndereco());
+        System.out.println("Chave pix: " + diarista.getChavePix());
+        System.out.println("Saldo: " + diarista.getSaldo());
 
-    // joao.atender("Joaozinho"); //chamada do metodo atender
+        diarista.depositar(100);
+        System.out.println("Saldo: " + diarista.getSaldo());
+        diarista.sacar(50);
+        System.out.println("Saldo: " + diarista.getSaldo());
 
-    var atendimento = new Atendimento(); //depende das regras do negocio
-    atendimento.setHoras(10);
-    System.out.println(atendimento.getHoras());
 
-    var cliente2 = new Cliente("JOSEZIN", "190", "RUA PAODELO" );
-    var diarista2 = new Diarista("Maria da fatime", "188", "PRINCESINHA","123" );
-    cliente2.depositar(100);
-    cliente2.transferir(diarista2, 70);
-    System.out.println(cliente2.getSaldo());
-    System.out.println(diarista2.getSaldo());
+        diarista.atender("Joaozinho"); //chamada do metodo atender
 
-    diarista2.transferir(cliente2, 20);
-    System.out.println(cliente2.getSaldo());
-    System.out.println(diarista2.getSaldo());
+        var cliente = new Cliente("Leonidas", "(68) 99999999", "TRAVESSA");
+        System.out.println("Nome: " + cliente.getNome());
+        System.out.println("Telefone: " + cliente.getTelefone());
+        System.out.println("Endereço: " + cliente.getEndereco());
+        System.out.println("Saldo: " + cliente.getSaldo());
+        cliente.depositar(1000);
+        System.out.println("Saldo: " + cliente.getSaldo());
+        cliente.sacar(400);
+        System.out.println("Saldo: " + cliente.getSaldo());
 
-    System.out.println(cliente);
-    System.out.println(diarista); //quando tentamos imprimir uma classe, é chamado um metodo espeical dessa classe, o toString
+        
 
-    var diarista3 = new Diarista("Nome teste", "190","motanhe", "as24e34e");
-    var diarista4 = new Diarista("Nome teste", "190","motanhe", "as24e34e");
+            //poderiamos fazer isso aqui. por isso classes abstratas. 
+        // var pessoa = new Pessoa(null, null, null); //apos alteramos para abstrato, deu erro nessa linha, pois ela é abstrata e pode ser aplicada somente atraves das subclasses
 
-    
-    System.out.println(diarista3.equals(diarista4)); // esse equals é quase como um comparador, por isso imprime falso, ela verifca a posicao de memoria que esse dado estar guardado
-    //apos fazermos o hashCode e equals em pessoa e diarista, ele leva em consideração os atributos e nao mais a posição em memoria
+        // joao.atender("Joaozinho"); //chamada do metodo atender
 
-    //metodo 1 toString - Representação em string daquele objeto
-    //metodo 2 equals - fazer comparaçõs entre diferentes tipos de objetos de uma mesma classe
-    //metodo 3 hasCode - gerar codigo unico que representa esse objeto
-}   //toda e qual
+        var atendimento = new Atendimento(); //depende das regras do negocio
+        atendimento.setHoras(10);
+        System.out.println(atendimento.getHoras());
+
+        var cliente2 = new Cliente("JOSEZIN", "190", "RUA PAODELO" );
+        var diarista2 = new Diarista("Maria da fatime", "188", "PRINCESINHA","123" );
+        cliente2.depositar(100);
+        cliente2.transferir(diarista2, 70);
+        System.out.println(cliente2.getSaldo());
+        System.out.println(diarista2.getSaldo());
+
+        diarista2.transferir(cliente2, 20);
+        System.out.println(cliente2.getSaldo());
+        System.out.println(diarista2.getSaldo());
+
+        System.out.println(cliente);
+        System.out.println(diarista); //quando tentamos imprimir uma classe, é chamado um metodo espeical dessa classe, o toString
+
+        var diarista3 = new Diarista("Nome teste", "190","motanhe", "as24e34e");
+        var diarista4 = new Diarista("Nome teste", "190","motanhe", "as24e34e");
+
+        
+        System.out.println(diarista3.equals(diarista4)); // esse equals é quase como um comparador, por isso imprime falso, ela verifca a posicao de memoria que esse dado estar guardado
+        //apos fazermos o hashCode e equals em pessoa e diarista, ele leva em consideração os atributos e nao mais a posição em memoria
+
+        //metodo 1 toString - Representação em string daquele objeto
+        //metodo 2 equals - fazer comparaçõs entre diferentes tipos de objetos de uma mesma classe
+        //metodo 3 hasCode - gerar codigo unico que representa esse objeto
+
+        var atendimento2 = new Atendimento();
+        atendimento2.setData("01/01/2023");
+        atendimento2.setHoras(10);
+        atendimento2.setCliente(cliente);
+        atendimento2.setDiarista(diarista);
+
+        System.out.println(atendimento2.getData());
+        System.out.println(atendimento2.getHoras());
+        System.out.println(atendimento2.getCliente().getNome()); //dessa maneira estou pegando o nome do cliente 2
+        System.out.println(atendimento2.getDiarista().getNome());
+
+
+         
+    }   
 
 }
 //Ala 04 herença - -usamos quando queremos reaproveitar o codigo em diferentes classes
@@ -90,9 +104,11 @@ public class App {
 //elas coseguem mudar seu comportamento interno em determinadas circunstancias 
 //LSP é parte de um conjunto de 5 praticas de codificacao conhecidas comos solid
 //visam codigos de alta qualidade e alinhadas com os principios das linguagens O A O 
- //Metodos especiais
+ //aula 09Metodos especiais
  //metodo 
 
+ //Composilçao - quando precisamos criar um tipo de classe complexo formado por outras classes menos complexas. 
+ // 
 
 // Pojo, pplain old java object -- Objeto java antigo +_ ; é ,mais ou menos uma padronização de como deveria ser uma classe
 //ela diz que todos os atributos devem ser privados ou protegidos, usando metodos geters e seters, get, set
