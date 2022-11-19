@@ -23,6 +23,10 @@ public class Cliente extends Pessoa{
         var novoSaldo = saldoAtual - valor;
         this.setSaldo(novoSaldo);
     }
+    @Override
+    public String toString() {
+        return "Cliente: " + this.getNome();
+    }
    // o exmeplo de ter doi metodos com a mesma assinatura e tratamentos diferentes em ambas da classe, CLIENTE E DIARISTA, ISSO é polimorfismo
   
   

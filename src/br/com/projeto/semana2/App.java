@@ -60,7 +60,20 @@ public class App {
     System.out.println(cliente2.getSaldo());
     System.out.println(diarista2.getSaldo());
 
-}
+    System.out.println(cliente);
+    System.out.println(diarista); //quando tentamos imprimir uma classe, é chamado um metodo espeical dessa classe, o toString
+
+    var diarista3 = new Diarista("Nome teste", "190","motanhe", "as24e34e");
+    var diarista4 = new Diarista("Nome teste", "190","motanhe", "as24e34e");
+
+    
+    System.out.println(diarista3.equals(diarista4)); // esse equals é quase como um comparador, por isso imprime falso, ela verifca a posicao de memoria que esse dado estar guardado
+    //apos fazermos o hashCode e equals em pessoa e diarista, ele leva em consideração os atributos e nao mais a posição em memoria
+
+    //metodo 1 toString - Representação em string daquele objeto
+    //metodo 2 equals - fazer comparaçõs entre diferentes tipos de objetos de uma mesma classe
+    //metodo 3 hasCode - gerar codigo unico que representa esse objeto
+}   //toda e qual
 
 }
 //Ala 04 herença - -usamos quando queremos reaproveitar o codigo em diferentes classes
@@ -77,8 +90,8 @@ public class App {
 //elas coseguem mudar seu comportamento interno em determinadas circunstancias 
 //LSP é parte de um conjunto de 5 praticas de codificacao conhecidas comos solid
 //visam codigos de alta qualidade e alinhadas com os principios das linguagens O A O 
- 
-
+ //Metodos especiais
+ //metodo 
 
 
 // Pojo, pplain old java object -- Objeto java antigo +_ ; é ,mais ou menos uma padronização de como deveria ser uma classe
