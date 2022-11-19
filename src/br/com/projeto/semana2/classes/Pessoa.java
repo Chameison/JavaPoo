@@ -1,6 +1,6 @@
 package br.com.projeto.semana2.classes;
 
-public class Pessoa {
+public abstract class Pessoa { //DEIXANDO ABSTRATA, usamos abstract
       
     private String nome; //paara serem atributos publicos
 

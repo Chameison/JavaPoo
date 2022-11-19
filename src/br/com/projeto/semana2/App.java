@@ -12,10 +12,7 @@ public class App {
     // joao.nome = "Chameison Araujo";
     // joao.telefone = "(68) 99950-5446";
     // joao.endereco = "Montanhes 1517";
-    var atendimento = new Atendimento(); //depende das regras do negocio
-    atendimento.setHoras(10);
-    System.out.println(atendimento.getHoras());
-
+ 
 
     System.out.println("Nome: " + diarista.getNome());
     System.out.println("Telefone: " + diarista.getTelefone());
@@ -30,9 +27,14 @@ public class App {
     System.out.println("Endereço: " + cliente.getEndereco());
     System.out.println("Saldo: " + cliente.getSaldo());
 
-
+        //poderiamos fazer isso aqui. por isso classes abstratas. 
+    // var pessoa = new Pessoa(null, null, null); //apos alteramos para abstrato, deu erro nessa linha, pois ela é abstrata e pode ser aplicada somente atraves das subclasses
 
     // joao.atender("Joaozinho"); //chamada do metodo atender
+
+    var atendimento = new Atendimento(); //depende das regras do negocio
+    atendimento.setHoras(10);
+    System.out.println(atendimento.getHoras());
 
 
 
