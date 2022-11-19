@@ -18,14 +18,27 @@ public class App {
     System.out.println("Telefone: " + diarista.getTelefone());
     System.out.println("Endereço: " + diarista.getEndereco());
     System.out.println("Chave pix: " + diarista.getChavePix());
+    System.out.println("Saldo: " + diarista.getSaldo());
+
+    diarista.depositar(100);
+    System.out.println("Saldo: " + diarista.getSaldo());
+    diarista.sacar(50);
+    System.out.println("Saldo: " + diarista.getSaldo());
+
 
     diarista.atender("Joaozinho"); //chamada do metodo atender
 
-    var cliente = new Cliente("Leonidas", "(68) 99999999", "TRAVESSA", 2000);
+    var cliente = new Cliente("Leonidas", "(68) 99999999", "TRAVESSA");
     System.out.println("Nome: " + cliente.getNome());
     System.out.println("Telefone: " + cliente.getTelefone());
     System.out.println("Endereço: " + cliente.getEndereco());
     System.out.println("Saldo: " + cliente.getSaldo());
+    cliente.depositar(1000);
+    System.out.println("Saldo: " + cliente.getSaldo());
+    cliente.sacar(400);
+    System.out.println("Saldo: " + cliente.getSaldo());
+
+    
 
         //poderiamos fazer isso aqui. por isso classes abstratas. 
     // var pessoa = new Pessoa(null, null, null); //apos alteramos para abstrato, deu erro nessa linha, pois ela é abstrata e pode ser aplicada somente atraves das subclasses
@@ -46,6 +59,10 @@ public class App {
 //temos oo public que da acesso a todos 
 //temos o private que apenas dentro da classse temos acesso
 //protetced somente as classes ou subclasses terao acesso a esses atributos
+
+//aula 06 classes abstratas.
+//aula 07 interfaces - é como se fosse um contrato, nao há implementação, ele define metodos que devem existir, deve ser implementados
+// como esses metodos vao funcionar quem define é a classe
 
 // Pojo, pplain old java object -- Objeto java antigo +_ ; é ,mais ou menos uma padronização de como deveria ser uma classe
 //ela diz que todos os atributos devem ser privados ou protegidos, usando metodos geters e seters, get, set

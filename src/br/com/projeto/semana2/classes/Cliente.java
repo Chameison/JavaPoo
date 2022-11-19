@@ -7,17 +7,23 @@ public class Cliente extends Pessoa{
     // public String telefone;
 
     // public String  endereco;
-    private double saldo;
-    public Cliente(String nome, String telefone, String endereco, double saldo){
+    public Cliente(String nome, String telefone, String endereco){
         super(nome, telefone, endereco); //usamos esse metoddo para herdar o construtor
-        this.saldo = saldo;
     }
-    public double getSaldo() {
-        return saldo;
+
+    @Override
+    public void depositar(double valor) { //atraves desses metodos
+        var saldoAtual = this.getSaldo();
+        var novoSaldo = saldoAtual + valor + (valor * 0.1);
+        this.setSaldo(novoSaldo);
     }
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
+    @Override
+    public void sacar(double valor){
+        var saldoAtual = this.getSaldo();
+        var novoSaldo = saldoAtual - valor;
+        this.setSaldo(novoSaldo);
     }
+   
   
   
 }

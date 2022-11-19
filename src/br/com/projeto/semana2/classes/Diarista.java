@@ -1,7 +1,7 @@
 package br.com.projeto.semana2.classes;
 
 public class Diarista extends Pessoa {
-     
+     //aqui clicamos na luzinha
    
     //poderia ter outro construtor, podemos ter varios
     //por exemplo
@@ -35,4 +35,21 @@ public class Diarista extends Pessoa {
         this.chavePix = chavePix;
     }
 
+    //criou as definicoes para esse metodo. 
+    //o Override quer dizer que o metodo sacar estar sobscrevendo o metodo sacar que foi definido na interface
+    //é uma boa pratica toda vez que dazemos uma sobscrita de metodo
+    @Override
+    public void sacar(double valor) {
+        var saldoAtual = this.getSaldo();
+        var novoSaldo = saldoAtual - valor;
+        this.setSaldo(novoSaldo);        
+    }
+
+    @Override
+    public void depositar(double valor) {
+        //diarista nao ganhara o bonus
+        var saldoAtual = this.getSaldo();   
+        var novoSaldo = saldoAtual + valor;
+        this.setSaldo(novoSaldo);     
+    }
 }
