@@ -57,6 +57,11 @@ public abstract class Pessoa implements ISaldo { //DEIXANDO ABSTRATA, usamos abs
         return saldo;
     }
     
+
+    public void transferir(ISaldo obj, double valor){
+        this.sacar(valor);
+        obj.depositar(valor);
+    }
     protected void setSaldo(double saldo) { //definimos o protected porque queremos que somente as classes que herdam de pessoas tenham acesso
         this.saldo = saldo;
     }

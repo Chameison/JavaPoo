@@ -49,9 +49,19 @@ public class App {
     atendimento.setHoras(10);
     System.out.println(atendimento.getHoras());
 
+    var cliente2 = new Cliente("JOSEZIN", "190", "RUA PAODELO" );
+    var diarista2 = new Diarista("Maria da fatime", "188", "PRINCESINHA","123" );
+    cliente2.depositar(100);
+    cliente2.transferir(diarista2, 70);
+    System.out.println(cliente2.getSaldo());
+    System.out.println(diarista2.getSaldo());
 
+    diarista2.transferir(cliente2, 20);
+    System.out.println(cliente2.getSaldo());
+    System.out.println(diarista2.getSaldo());
 
-    }
+}
+
 }
 //Ala 04 herença - -usamos quando queremos reaproveitar o codigo em diferentes classes
 //nao posso ter mais de uma classe publica
@@ -63,6 +73,13 @@ public class App {
 //aula 06 classes abstratas.
 //aula 07 interfaces - é como se fosse um contrato, nao há implementação, ele define metodos que devem existir, deve ser implementados
 // como esses metodos vao funcionar quem define é a classe
+//aula 08 polimofirmos -- liskov, polimofismo é uma funcionalidade de OB, estruturas polimorficas
+//elas coseguem mudar seu comportamento interno em determinadas circunstancias 
+//LSP é parte de um conjunto de 5 praticas de codificacao conhecidas comos solid
+//visam codigos de alta qualidade e alinhadas com os principios das linguagens O A O 
+ 
+
+
 
 // Pojo, pplain old java object -- Objeto java antigo +_ ; é ,mais ou menos uma padronização de como deveria ser uma classe
 //ela diz que todos os atributos devem ser privados ou protegidos, usando metodos geters e seters, get, set
