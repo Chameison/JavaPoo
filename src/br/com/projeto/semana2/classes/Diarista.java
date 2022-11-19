@@ -5,7 +5,7 @@ public class Diarista extends Pessoa {
    
     //poderia ter outro construtor, podemos ter varios
     //por exemplo
-    public String chavePix;
+    private String chavePix;
     public Diarista(String nome){
         super(nome, null, null); //a responsabilidade por criar o objeto é da classe pessoa, entao definimos como nulo os outros parametros
     }
@@ -20,10 +20,19 @@ public class Diarista extends Pessoa {
         // this.endereco = endereco;
 
     } 
+    
     //construtor, e ele ja recerbera os valores que teremos. O construtor é atribuido a classe, é criado entao a instancia do objeto
 
     public void atender(String nomeClienteString){  //metodo publico /tipo de retorno / nome,
         System.out.println("Realizando atendimento para cliente " + nomeClienteString);
+    }
+
+    public String getChavePix() {
+        return chavePix;
+    }
+
+    public void setChavePix(String chavePix) {
+        this.chavePix = chavePix;
     }
 
 }

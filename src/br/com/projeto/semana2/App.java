@@ -1,5 +1,6 @@
 package br.com.projeto.semana2;
 
+import br.com.projeto.semana2.classes.Atendimento;
 import br.com.projeto.semana2.classes.Cliente;
 import br.com.projeto.semana2.classes.Diarista; //aqui a importação
 
@@ -11,20 +12,23 @@ public class App {
     // joao.nome = "Chameison Araujo";
     // joao.telefone = "(68) 99950-5446";
     // joao.endereco = "Montanhes 1517";
+    var atendimento = new Atendimento(); //depende das regras do negocio
+    atendimento.setHoras(10);
+    System.out.println(atendimento.getHoras());
 
 
-    System.out.println("Nome: " + diarista.nome);
-    System.out.println("Telefone: " + diarista.telefone);
-    System.out.println("Endereço: " + diarista.endereco);
-    System.out.println("Chave pix: " + diarista.chavePix);
+    System.out.println("Nome: " + diarista.getNome());
+    System.out.println("Telefone: " + diarista.getTelefone());
+    System.out.println("Endereço: " + diarista.getEndereco());
+    System.out.println("Chave pix: " + diarista.getChavePix());
 
     diarista.atender("Joaozinho"); //chamada do metodo atender
 
     var cliente = new Cliente("Leonidas", "(68) 99999999", "TRAVESSA", 2000);
-    System.out.println("Nome: " + cliente.nome);
-    System.out.println("Telefone: " + cliente.telefone);
-    System.out.println("Endereço: " + cliente.endereco);
-    System.out.println("Saldo: " + cliente.saldo);
+    System.out.println("Nome: " + cliente.getNome());
+    System.out.println("Telefone: " + cliente.getTelefone());
+    System.out.println("Endereço: " + cliente.getEndereco());
+    System.out.println("Saldo: " + cliente.getSaldo());
 
 
 
@@ -36,8 +40,13 @@ public class App {
 }
 //Ala 04 herença - -usamos quando queremos reaproveitar o codigo em diferentes classes
 //nao posso ter mais de uma classe publica
+//aula 05 encapsulamento - nada mais é do que uma forma de eu definir o nivel de acesso dos meus atributos, dos metodos para as classes
+//temos oo public que da acesso a todos 
+//temos o private que apenas dentro da classse temos acesso
+//protetced somente as classes ou subclasses terao acesso a esses atributos
 
-
+// Pojo, pplain old java object -- Objeto java antigo +_ ; é ,mais ou menos uma padronização de como deveria ser uma classe
+//ela diz que todos os atributos devem ser privados ou protegidos, usando metodos geters e seters, get, set
 
 
     // var maria = new Diarista("Maria Araujo", "(68) 99920-5446","Tancredo 1517" ); //classe diariista esta em outro local, vamos importar
